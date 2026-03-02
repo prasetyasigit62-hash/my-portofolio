@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Web Developer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-blue-600">DevPortfolio.</a>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                    <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                    <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
+                    <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+
+            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                    Membangun Sistem Web <br> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Modern &
+                        Efisien</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
+                    Halo! Saya seorang Full-Stack Web Developer yang berfokus pada pembuatan sistem informasi dan
+                    aplikasi berbasis web yang responsif, aman, dan siap pakai.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#projects"
+                        class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition duration-300">
+                        Lihat Karya Saya
+                    </a>
+                    <a href="cv.pdf" target="_blank"
+                        class="px-8 py-3 bg-white text-blue-600 border border-blue-600 font-semibold rounded-full shadow-md hover:bg-blue-50 transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Unduh CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div
+                    class="w-64 h-64 md:w-80 md:h-80 bg-slate-200 rounded-full overflow-hidden border-4 border-white shadow-2xl relative">
+                    <img src="profil.png" alt="Foto Profil" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Proyek Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="gambar1.png" alt="Screenshot SmartBooking"
+                        class="h-48 w-full object-cover object-top border-b border-slate-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SmartBooking System</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Sistem Manajemen Booking Ruangan lengkap dengan fitur kalender, manajemen master data,
+                            konfirmasi persetujuan, dan keamanan autentikasi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Laravel</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">MySQL</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Tailwind</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="https://smartbooking.free.nf" target="_blank"
+                                class="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1"><i
+                                    class="fa-solid fa-globe"></i> Live Preview</a>
+                            <a href="https://github.com/username-anda/smartbooking" target="_blank"
+                                class="text-slate-600 font-semibold text-sm hover:text-slate-900 hover:underline flex items-center gap-1"><i
+                                    class="devicon-github-original"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="gambar2.png" alt="Screenshot HRIS Absensi"
+                        class="h-48 w-full object-cover object-top border-b border-slate-200">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HRIS & Sistem Absensi</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Sistem Informasi Sumber Daya Manusia (HRIS) terintegrasi untuk mencatat kehadiran pegawai,
+                            mengelola data karyawan, dan merekapitulasi laporan otomatis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">PHP</span>
+                            <span
+                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Dashboard</span>
+                            <span
+                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">MySQL</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="#"
+                                class="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1"><i
+                                    class="fa-solid fa-globe"></i> Live Preview</a>
+                            <a href="https://github.com/username-anda/hris" target="_blank"
+                                class="text-slate-600 font-semibold text-sm hover:text-slate-900 hover:underline flex items-center gap-1"><i
+                                    class="devicon-github-original"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Teknologi & Keahlian</h2>
+            <div class="flex flex-wrap justify-center gap-4" data-aos="zoom-in" data-aos-delay="100">
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-php-plain colored text-xl"></i><i
+                        class="devicon-laravel-plain colored text-xl"></i> PHP & Laravel</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-mysql-plain colored text-xl"></i> MySQL / Database</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-html5-plain colored text-xl"></i><i
+                        class="devicon-css3-plain colored text-xl"></i><i
+                        class="devicon-javascript-plain colored text-xl"></i> HTML, CSS, JS</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-git-plain colored text-xl"></i><i
+                        class="devicon-github-original text-slate-800 text-xl"></i> Git & GitHub</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-tailwindcss-plain colored text-xl"></i> Tailwind CSS</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="devicon-bootstrap-plain colored text-xl"></i> Bootstrap</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="fa-solid fa-cloud-arrow-up text-blue-500 text-xl"></i> Web Hosting</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="fa-solid fa-bolt text-yellow-500 text-xl"></i> AJAX</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="fa-solid fa-code text-slate-600 text-xl"></i> JSON</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="fa-solid fa-network-wired text-purple-500 text-xl"></i> API</span>
+                <span
+                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
+                        class="fa-solid fa-brain text-pink-500 text-xl"></i> Critical Thinking</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white px-4 text-center">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">Mari Berkolaborasi!</h2>
+            <p class="text-slate-600 mb-8">
+                Saya selalu terbuka untuk mendiskusikan proyek pembuatan web, peluang kerja sama, atau kesempatan
+                berkarir. Jangan ragu untuk menghubungi saya.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:emailanda@gmail.com?subject=Halo! Saya tertarik dengan Portofolio Anda"
+                    class="px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg shadow-md hover:bg-slate-800 transition flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
+                <a href="https://linkedin.com/in/username-anda" target="_blank"
+                    class="px-6 py-3 bg-[#0A66C2] text-white font-semibold rounded-lg shadow-md hover:bg-[#004182] transition flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                </a>
+                <a href="https://github.com/username-anda" target="_blank"
+                    class="px-6 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition flex items-center gap-2">
+                    <i class="devicon-github-original text-xl"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>&copy; 2026 Dibuat dengan semangat. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Durasi animasi (ms)
+            once: true,    // Animasi hanya berjalan sekali saat di-scroll
+            offset: 100    // Jarak pemicu animasi
+        });
+    </script>
+</body>
+
+</html>
