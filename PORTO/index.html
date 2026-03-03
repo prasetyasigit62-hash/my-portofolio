@@ -4,224 +4,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Web Developer</title>
+    <title>Prasetya Sigit | Backend Developer Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            background: rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
         }
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-2xl font-bold text-blue-600">DevPortfolio.</a>
-                <div class="hidden md:flex space-x-8 text-sm font-semibold">
-                    <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
-                    <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
+    <nav class="fixed w-full z-50 glass border-b border-white/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-xl font-extrabold tracking-tighter text-blue-600 uppercase">GITS<span
+                        class="text-slate-400">.DEV</span></a>
+                <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-slate-600">
+                    <a href="#projects" class="hover:text-blue-600 transition">Showcase</a>
                     <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
-                    <a href="#contact" class="hover:text-blue-600 transition">Kontak</a>
+                    <a href="#contact"
+                        class="hover:text-blue-600 transition text-blue-600 border-b-2 border-blue-600">Hubungi Saya</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <section id="home" class="relative pt-40 pb-24 md:pt-60 md:pb-40 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+            </div>
+            <div
+                class="absolute top-40 right-10 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
+            </div>
+        </div>
 
-            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
-                <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                    Membangun Sistem Web <br> <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Modern &
-                        Efisien</span>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
+            <div class="md:w-3/5 text-center md:text-left" data-aos="fade-right">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-blue-700 uppercase bg-blue-100 rounded-full">Backend
+                    Developer Specialist</span>
+                <h1
+                    class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight uppercase tracking-tighter text-slate-900">
+                    Arsitektur <br> <span class="text-gradient">Web Enterprise</span>
                 </h1>
-                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-                    Halo! Saya seorang Full-Stack Web Developer yang berfokus pada pembuatan sistem informasi dan
-                    aplikasi berbasis web yang responsif, aman, dan siap pakai.
+
+                <p class="text-lg md:text-xl text-slate-500 mb-12 leading-relaxed max-w-2xl text-justify">
+                    Spesialis Backend yang berfokus pada arsitektur <b>Laravel</b> dan manajemen database kompleks
+                    <b>PostgreSQL/MySQL</b>.
+                    Mahir mengoptimasi performa sistem melalui <b>AJAX Server-side</b> dan integrasi <b>RESTful API</b>
+                    berbasis <b>JSON</b>.
+                    Saya memadukan logika backend yang kuat dengan antarmuka modern menggunakan <b>Tailwind, Bootstrap,
+                        & Materialize</b>
+                    yang dirancang melalui prinsip <b>UI/UX Figma</b>. Selalu mengedepankan <b>Critical Thinking</b> dan
+                    <b>Version Control (Git)</b>
+                    untuk membangun solusi web yang efisien dan skalabel.
                 </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-6">
                     <a href="#projects"
-                        class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition duration-300">
-                        Lihat Karya Saya
-                    </a>
+                        class="px-10 py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-blue-200 shadow-2xl hover:bg-blue-700 transition duration-300 uppercase tracking-widest">Lihat
+                        Projek</a>
                     <a href="cv.pdf" target="_blank"
-                        class="px-8 py-3 bg-white text-blue-600 border border-blue-600 font-semibold rounded-full shadow-md hover:bg-blue-50 transition duration-300 flex items-center gap-2">
-                        <i class="fa-solid fa-download"></i> Unduh CV
+                        class="px-10 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-2xl hover:bg-slate-50 transition duration-300 flex items-center gap-3 uppercase tracking-widest">
+                        <i class="fa-solid fa-file-pdf"></i> Resume
                     </a>
                 </div>
             </div>
 
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
-                <div
-                    class="w-64 h-64 md:w-80 md:h-80 bg-slate-200 rounded-full overflow-hidden border-4 border-white shadow-2xl relative">
-                    <img src="profil.png" alt="Foto Profil" class="w-full h-full object-cover">
+            <div class="md:w-2/5 flex justify-center" data-aos="fade-left">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                    </div>
+                    <div
+                        class="relative w-72 h-72 md:w-96 md:h-96 bg-white rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl">
+                        <img src="profil.png" alt="Sigit Profile"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-white px-4">
+    <section id="projects" class="py-32 bg-white px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Proyek Unggulan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 uppercase tracking-tighter text-slate-900">
+                        Showcase Projek</h2>
+                    <p class="text-slate-500 text-lg italic">Dokumentasi sistem yang dikembangkan dengan fokus pada
+                        efisiensi logika backend.</p>
+                </div>
+            </div>
 
-                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <img src="gambar1.png" alt="Screenshot SmartBooking"
-                        class="h-48 w-full object-cover object-top border-b border-slate-200">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">SmartBooking System</h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Sistem Manajemen Booking Ruangan lengkap dengan fitur kalender, manajemen master data,
-                            konfirmasi persetujuan, dan keamanan autentikasi.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Laravel</span>
-                            <span
-                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">MySQL</span>
-                            <span
-                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Tailwind</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 transition duration-500 hover:shadow-xl hover:-translate-y-2 group"
+                    data-aos="fade-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="gambar3.png" alt="Smart HRIS Preview"
+                            class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition duration-500">
                         </div>
-                        <div class="flex items-center gap-4">
-                            <a href="https://smartbooking.free.nf" target="_blank"
-                                class="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1"><i
-                                    class="fa-solid fa-globe"></i> Live Preview</a>
-                            <a href="https://github.com/username-anda/smartbooking" target="_blank"
-                                class="text-slate-600 font-semibold text-sm hover:text-slate-900 hover:underline flex items-center gap-1"><i
-                                    class="devicon-github-original"></i> Source Code</a>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4">Smart HRIS & Automated Payroll System 🏢</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-justify">
+                            Sistem Informasi SDM (HRIS) berskala <i>enterprise</i> yang dirancang untuk mendigitalisasi
+                            proses HR secara <i>end-to-end</i>. Sistem ini dilengkapi modul <b>Absensi Wajah (Face
+                                Recognition)</b> interaktif, manajemen <b>Lembur (Overtime)</b> dengan kalkulasi durasi
+                            presisi, dan alur <b>SPPD</b> berbalut <i>multi-level approval</i>. Pada sisi <i>core</i>,
+                            terdapat <b>Smart Payroll Engine</b> yang memproses kalkulasi gaji otomatis secara dinamis,
+                            diakhiri dengan distribusi <i>e-slip</i> gaji instan melalui <b>WhatsApp API Gateway</b>.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-10 text-[10px] font-black uppercase tracking-tighter">
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">Laravel</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">PostgreSQL</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">AJAX
+                                Server-side</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">WhatsApp
+                                API</span>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <a href="https://bibliotic-candida-morainic.ngrok-free.dev" target="_blank"
+                                class="text-blue-600 font-extrabold text-sm hover:underline flex items-center gap-2 uppercase tracking-widest"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/prasetyasigit62-hash/hris-system-pro" target="_blank"
+                                class="text-slate-400 font-bold text-sm hover:text-slate-900 transition flex items-center gap-2 uppercase tracking-widest"><i
+                                    class="fa-brands fa-github text-xl"></i> Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
+                <div class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 transition duration-500 hover:shadow-xl hover:-translate-y-2 group"
                     data-aos="fade-up" data-aos-delay="200">
-                    <img src="gambar2.png" alt="Screenshot HRIS Absensi"
-                        class="h-48 w-full object-cover object-top border-b border-slate-200">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">HRIS & Sistem Absensi</h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Sistem Informasi Sumber Daya Manusia (HRIS) terintegrasi untuk mencatat kehadiran pegawai,
-                            mengelola data karyawan, dan merekapitulasi laporan otomatis.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">PHP</span>
-                            <span
-                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Dashboard</span>
-                            <span
-                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">MySQL</span>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="gambar1.png" alt="SmartBooking Preview"
+                            class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition duration-500">
                         </div>
-                        <div class="flex items-center gap-4">
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold mb-4">SmartBooking & Asset Management 📅</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-justify">
+                            Platform manajemen reservasi ruangan dan aset terpadu untuk mencegah inefisiensi penjadwalan
+                            operasional. Dioptimasi dengan <b>AJAX Server-side DataTables</b> untuk menyajikan ribuan
+                            log data tanpa <i>load time</i> yang berat. Sistem ini diperkaya dengan <b>Interactive
+                                Booking Calendar</b> untuk pemantauan <i>real-time</i>, algoritma <b>Collision
+                                Detection</b> guna mencegah bentrok jadwal (<i>double-booking</i>), manajemen <i>Master
+                                Data</i> terpusat, serta <b>WhatsApp Automated Reminders</b> untuk notifikasi jadwal
+                            rapat.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-10 text-[10px] font-black uppercase tracking-tighter">
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">Laravel</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">AJAX
+                                Server-side</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">MySQL</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 text-blue-700 rounded-lg shadow-sm">WhatsApp
+                                API</span>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <a href="https://smartbooking.free.nf" target="_blank"
+                                class="text-blue-600 font-extrabold text-sm hover:underline flex items-center gap-2 uppercase tracking-widest"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
                             <a href="#"
-                                class="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1"><i
-                                    class="fa-solid fa-globe"></i> Live Preview</a>
-                            <a href="https://github.com/username-anda/hris" target="_blank"
-                                class="text-slate-600 font-semibold text-sm hover:text-slate-900 hover:underline flex items-center gap-1"><i
-                                    class="devicon-github-original"></i> Source Code</a>
+                                class="text-slate-400 font-bold text-sm hover:text-slate-900 transition flex items-center gap-2 uppercase tracking-widest"><i
+                                    class="fa-brands fa-github text-xl"></i> Repository</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 px-4 bg-slate-50">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Teknologi & Keahlian</h2>
-            <div class="flex flex-wrap justify-center gap-4" data-aos="zoom-in" data-aos-delay="100">
+    <section id="skills" class="py-32 px-6 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-20 uppercase tracking-tighter" data-aos="fade-up">
+                Teknologi <span class="text-blue-400">&</span> Keahlian</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8" data-aos="zoom-in">
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-laravel-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">LARAVEL</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-postgresql-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">POSTGRESQL</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-mysql-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">MYSQL</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group text-yellow-400">
+                    <i class="fa-solid fa-bolt text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px] text-white">AJAX SERVER-SIDE</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-javascript-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">JAVASCRIPT</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group text-blue-400">
+                    <i class="fa-solid fa-code text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px] text-white">JSON</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-html5-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">HTML 5</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-css3-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">CSS 3</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-bootstrap-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">BOOTSTRAP</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-tailwindcss-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">TAILWIND CSS</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-materializecss-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">MATERIALIZE</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-figma-plain colored text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">UI UX DESIGN</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group text-purple-400">
+                    <i class="fa-solid fa-network-wired text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px] text-white uppercase">API Integration</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group">
+                    <i class="devicon-github-original text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px]">GIT/GITHUB</p>
+                </div>
+                <div class="skill-card p-8 bg-white/5 rounded-3xl border border-white/10 group text-pink-500">
+                    <i class="fa-solid fa-brain text-5xl mb-4"></i>
+                    <p class="font-bold tracking-widest text-[10px] text-white uppercase">Critical Thinking</p>
+                </div>
+            </div>
+
+            <div class="mt-20 flex flex-wrap justify-center gap-4" data-aos="fade-up">
                 <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-php-plain colored text-xl"></i><i
-                        class="devicon-laravel-plain colored text-xl"></i> PHP & Laravel</span>
+                    class="px-6 py-2 bg-blue-600/20 text-blue-400 rounded-full font-bold border border-blue-600/30 text-[10px] uppercase italic">Automated
+                    Payroll Systems</span>
                 <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-mysql-plain colored text-xl"></i> MySQL / Database</span>
+                    class="px-6 py-2 bg-blue-600/20 text-blue-400 rounded-full font-bold border border-blue-600/30 text-[10px] uppercase italic">Database
+                    Optimization</span>
                 <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-html5-plain colored text-xl"></i><i
-                        class="devicon-css3-plain colored text-xl"></i><i
-                        class="devicon-javascript-plain colored text-xl"></i> HTML, CSS, JS</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-git-plain colored text-xl"></i><i
-                        class="devicon-github-original text-slate-800 text-xl"></i> Git & GitHub</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-tailwindcss-plain colored text-xl"></i> Tailwind CSS</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="devicon-bootstrap-plain colored text-xl"></i> Bootstrap</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="fa-solid fa-cloud-arrow-up text-blue-500 text-xl"></i> Web Hosting</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="fa-solid fa-bolt text-yellow-500 text-xl"></i> AJAX</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="fa-solid fa-code text-slate-600 text-xl"></i> JSON</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="fa-solid fa-network-wired text-purple-500 text-xl"></i> API</span>
-                <span
-                    class="flex items-center gap-2 px-5 py-3 bg-white shadow-sm border border-slate-200 rounded-lg font-semibold text-slate-700 hover:shadow-md transition"><i
-                        class="fa-solid fa-brain text-pink-500 text-xl"></i> Critical Thinking</span>
+                    class="px-6 py-2 bg-blue-600/20 text-blue-400 rounded-full font-bold border border-blue-600/30 text-[10px] uppercase italic">WhatsApp
+                    Gateway Integration</span>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white px-4 text-center">
-        <div class="max-w-2xl mx-auto" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-6">Mari Berkolaborasi!</h2>
-            <p class="text-slate-600 mb-8">
-                Saya selalu terbuka untuk mendiskusikan proyek pembuatan web, peluang kerja sama, atau kesempatan
-                berkarir. Jangan ragu untuk menghubungi saya.
+    <section id="contact" class="py-32 px-6 bg-white text-center">
+        <div class="max-w-4xl mx-auto" data-aos="zoom-out">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-10 tracking-tighter">Mari <span
+                    class="text-gradient">Berkolaborasi!</span></h2>
+            <p class="text-slate-500 text-xl mb-16 leading-relaxed text-center italic max-w-2xl mx-auto">
+                Saya terbuka untuk peluang kolaborasi dalam membangun sistem backend yang kompleks, efisien, dan
+                skalabel.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:emailanda@gmail.com?subject=Halo! Saya tertarik dengan Portofolio Anda"
-                    class="px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg shadow-md hover:bg-slate-800 transition flex items-center gap-2">
-                    <i class="fa-solid fa-envelope"></i> Email
+
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+                <a href="mailto:prasetyasigit62@gmail.com"
+                    class="min-w-[170px] px-8 py-5 bg-slate-900 text-white font-bold rounded-2xl shadow-xl hover:bg-black transition flex items-center justify-center gap-3 italic">
+                    <i class="fa-solid fa-envelope text-blue-400"></i> email.me
                 </a>
-                <a href="https://linkedin.com/in/username-anda" target="_blank"
-                    class="px-6 py-3 bg-[#0A66C2] text-white font-semibold rounded-lg shadow-md hover:bg-[#004182] transition flex items-center gap-2">
-                    <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                <a href="https://wa.me/6289521410568" target="_blank"
+                    class="min-w-[170px] px-8 py-5 bg-emerald-500 text-white font-bold rounded-2xl shadow-xl hover:bg-emerald-600 transition flex items-center justify-center gap-3 italic">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> chat.now
                 </a>
-                <a href="https://github.com/username-anda" target="_blank"
-                    class="px-6 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition flex items-center gap-2">
-                    <i class="devicon-github-original text-xl"></i> GitHub
+                <a href="https://github.com/prasetyasigit62-hash" target="_blank"
+                    class="min-w-[170px] px-8 py-5 bg-slate-800 text-white font-bold rounded-2xl shadow-xl hover:bg-slate-900 transition flex items-center justify-center gap-3 italic">
+                    <i class="fa-brands fa-github text-2xl text-blue-300"></i> github
+                </a>
+                <a href="https://linkedin.com/in/sigit-prasetya" target="_blank"
+                    class="min-w-[170px] px-8 py-5 bg-[#0A66C2] text-white font-bold rounded-2xl shadow-xl hover:bg-[#084482] transition flex items-center justify-center gap-3 italic">
+                    <i class="fa-brands fa-linkedin text-2xl"></i> linkedin
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
-        <p>&copy; 2026 Dibuat dengan semangat. All rights reserved.</p>
+    <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
+        <p class="text-slate-400 font-bold tracking-widest text-[10px] uppercase">&copy; 2026 Crafted with precision by
+            Prasetya Sigit. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800, // Durasi animasi (ms)
-            once: true,    // Animasi hanya berjalan sekali saat di-scroll
-            offset: 100    // Jarak pemicu animasi
-        });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
-
 
 </html>
